@@ -2,6 +2,8 @@
 #include <stack>
 #include <string>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wmissing-noreturn"
 struct Bracket {
     Bracket(char type, int position):
             type(type),
@@ -25,27 +27,47 @@ struct Bracket {
 int main() {
     std::string text;
     getline(std::cin, text);
-    bool isBalanced = false;                                        // my line
+    bool isBalanced = true;
+    int failedChar = -1;
 
-    std::stack <Bracket> opening_brackets_stack;
+    std::stack<Bracket> opening_brackets_stack;
     for (int position = 0; position < text.length(); ++position) {
         char next = text[position];
-
         if (next == '(' || next == '[' || next == '{') {
-            opening_brackets_stack.push(Bracket(next, position));   // my line
+            opening_brackets_stack.push(Bracket(next, position));
         }
-
         if (next == ')' || next == ']' || next == '}') {
-            if(opening_brackets_stack.empty()) {                    // my line
-                isBalanced = false;                                 // my line
-                continue;                                           // my line
-            }                                                       // my line
-            Bracket br = opening_brackets_stack.top();              // my line
-            opening_brackets_stack.pop();                           // my line
-            isBalanced = br.Matchc(next);                           // my line
+            // First unmatched closing bracket
+            if (opening_brackets_stack.empty()) {
+                isBalanced = false;
+                failedChar = position;
+                break;
+            }
+            Bracket bracket = opening_brackets_stack.top();
+            opening_brackets_stack.pop();
+            if (!bracket.Matchc(next)) {
+                isBalanced = false;
+                failedChar = position;
+                break;
+            }
         }
     }
-    std::cout << ((isBalanced)? "balanced":"not balanced") << "\n"; // my line
 
+    if (isBalanced) {
+        isBalanced = opening_brackets_stack.empty();
+        if (!isBalanced) {
+            while (opening_brackets_stack.size() != 1) {
+                opening_brackets_stack.pop();
+            }
+            failedChar = opening_brackets_stack.top().position;
+        }
+    }
+
+    if (isBalanced) {
+        std::cout << "Success";
+    } else {
+        std::cout << std::to_string(failedChar + 1);
+    }
     return 0;
 }
+#pragma clang diagnostic pop
