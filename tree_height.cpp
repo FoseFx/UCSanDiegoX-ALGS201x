@@ -25,13 +25,13 @@ public:
 };
 
 int height(Node *nodep){
-    Node node = *nodep;
-    if(node.children.empty()) return 1;
-    int heights[node.children.size()];
-    for (int i = 0; i < node.children.size(); i++){
-        heights[i] = height(node.children[i]);
+    std::vector<Node*> children = (*nodep).children;
+    if(children.empty()) return 1;
+    int heights[children.size()];
+    for (int i = 0; i < children.size(); i++){
+        heights[i] = height(children[i]);
     }
-    return 1 + *std::max_element(heights, heights + node.children.size());
+    return 1 + *std::max_element(heights, heights + children.size());
                                                                 //Im not a C++Dev, so figuring this out took some time
 }
 
@@ -64,7 +64,7 @@ int main (int argc, char **argv)
 {
 #if defined(__unix__) || defined(__APPLE__)
     // Allow larger stack space
-    const rlim_t kStackSize = 32 * 1024 * 1024;   // min stack size = 16 MB
+    const rlim_t kStackSize = 32 * 1024 * 1024;   // min stack size = 32 MB
     struct rlimit rl;
     int result;
 
