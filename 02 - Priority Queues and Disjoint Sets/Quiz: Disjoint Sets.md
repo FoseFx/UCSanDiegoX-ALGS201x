@@ -24,7 +24,9 @@
 -------------
 
 #Q2
+
 ![Image](../images/02q/q2.png)
+
 ##Sets before Unions:
 - `{1}`
 - `{2}`
@@ -41,6 +43,7 @@
 
 
 ##Sets after Unions:
+
 1. `{1, {6}, {9}}`
 2. `{2, {10}, {12}}`
 3. `{5, {7}, {11}, {8}, {3, {4}}}`
@@ -55,7 +58,9 @@ Just count all the cascading `{` and subtract one.
 
 -----------------------
 #Q3
+
 ![Image](../images/02q/q3.png)
+
 ##Example 
 let n = 5
 - `{1}`
@@ -82,4 +87,5 @@ Amount = 1
 `One tree of height 1. correct`
 
 #Q4
+
 ![Image](../images/02q/q4.png)
