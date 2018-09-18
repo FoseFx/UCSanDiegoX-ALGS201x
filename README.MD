@@ -10,3 +10,4 @@ Here are the results of the programming exercises.
 
 ## 02 - Priority Queues and Disjoint Sets
 - [Quiz: Disjoint Sets](02%20-%20Priority%20Queues%20and%20Disjoint%20Sets/Quiz:%20Disjoint%20Sets.md)
+- [Quiz: Priority Queues and Disjoint Sets](02%20-%20Priority%20Queues%20and%20Disjoint%20Sets/Quiz:%20Priority%20Queues%20and%20Disjoint%20Sets.png)
