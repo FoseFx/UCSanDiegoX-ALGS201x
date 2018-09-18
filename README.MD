@@ -8,3 +8,5 @@ Here are the results of the programming exercises.
 - [Recursively calculate the height of a given tree](01%20-%20Data%20Structures%20Fundamentals/tree_height.cpp)
 - [Network packet processing simulation](01%20-%20Data%20Structures%20Fundamentals/process_packages.cpp)
 
+## 02 - Priority Queues and Disjoint Sets
+- [Quiz: Disjoint Sets](02%20-%20Priority%20Queues%20and%20Disjoint%20Sets/Quiz:%20Disjoint%20Sets.md)
