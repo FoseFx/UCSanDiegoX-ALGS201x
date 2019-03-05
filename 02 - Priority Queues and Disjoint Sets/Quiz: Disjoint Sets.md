@@ -19,16 +19,16 @@
 2. `{2, 10, 12}`
 3. `{3, 4, 5, 7, 8, 11}`
 
-##Answer:
+## Answer:
 `1 3 3 1`
 
 -------------
 
-#Q2
+# Q2
 
 ![Image](../images/02q/q2.png)
 
-#Sets before Unions:
+# Sets before Unions:
 - `{1}`
 - `{2}`
 - `{3}`
@@ -43,7 +43,7 @@
 - `{12}`
 
 
-#Sets after Unions:
+# Sets after Unions:
 
 1. `{1, {6}, {9}}`
 2. `{2, {10}, {12}}`
@@ -62,7 +62,7 @@ Just count all the cascading `{` and subtract one.
 
 ![Image](../images/02q/q3.png)
 
-#Example 
+# Example 
 let n = 5
 - `{1}`
 - `{2}`
@@ -84,9 +84,9 @@ Height = 1
 
 Amount = 1
 
-#Answer
+#  Answer
 `One tree of height 1. correct`
 
-#Q4
+# Q4
 
 ![Image](../images/02q/q4.png)
