@@ -1,6 +1,6 @@
 # Q1
 ![Image](../images/02q/q1.png)
-##Sets before Unions:
+## Sets before Unions:
 - `{1}`
 - `{2}`
 - `{3}`
@@ -14,7 +14,7 @@
 - `{11}`
 - `{12}`
 
-#Sets after Unions:
+# Sets after Unions:
 1. `{1, 6, 9}`
 2. `{2, 10, 12}`
 3. `{3, 4, 5, 7, 8, 11}`
